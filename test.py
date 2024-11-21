@@ -1,12 +1,12 @@
 import os
 import numpy as np
-from tensorflow.keras.models import load_model
 from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # виводитиме лише помилки
 
+from tensorflow.keras.models import load_model
 # Отримання шляху до поточного скрипта
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
