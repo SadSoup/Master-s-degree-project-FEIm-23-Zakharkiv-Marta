@@ -180,7 +180,10 @@ plot_history(history, model, val_images, val_labels_encoded)
 if_save = input('Чи бажаєте Ви зберегти модель[y/n]: ')
 if if_save.strip().lower() == 'y':
     model_name = input('Назвіть модель (без розширення): ')
-    model.save(os.path.join(script_directory,model_name + '.h5'))
-    print('Модель збережено.')
+    if model_name:
+        model.save(os.path.join(script_directory,model_name + '.h5'))
+        print('Модель збережено.')
+    else:
+        print("Назву не надано, модель не збережено.")
 else:
     print('Модель не збережено')
