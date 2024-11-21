@@ -1,6 +1,4 @@
 import numpy as np
-import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
 import multiprocessing
 import time
@@ -8,8 +6,10 @@ import math
 import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report
 
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # виводитиме лише помилки
+
+import tensorflow as tf
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 # виділення ядер для ефективнішої роботи
 num_workers = multiprocessing.cpu_count() - 2 if multiprocessing.cpu_count() > 3 else 1
