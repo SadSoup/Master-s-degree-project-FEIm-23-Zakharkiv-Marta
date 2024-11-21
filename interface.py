@@ -1,12 +1,13 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from PIL import Image, ImageTk
-import tensorflow as tf
 import numpy as np
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import os
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # виводитиме лише помилки
+
+import tensorflow as tf
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 # Отримання шляху до поточного скрипта
 script_directory = os.path.dirname(os.path.abspath(__file__))
