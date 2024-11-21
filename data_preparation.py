@@ -1,7 +1,10 @@
 import numpy as np
+import os
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # виводитиме лише помилки
+
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.utils import to_categorical
-import os
 
 # ф-я для перетворення зображень у масиви numpy
 def load_images_from_folder(folder, size=(150, 150)):
